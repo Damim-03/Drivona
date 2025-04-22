@@ -1,0 +1,109 @@
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="e7e014a7-5840-1c2e-5031-d8a46d1fe8dd">
+        <mxGraphModel dx="918" dy="1390" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3x8CAyZt968ioepNavin-51" value="" style="ellipse;html=1;shape=startState;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="-10" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-52" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;entryX=0.492;entryY=-0.002;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="3x8CAyZt968ioepNavin-51" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="45" y="100" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="35"/>
+                            <mxPoint x="349" y="35"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-54" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" target="3x8CAyZt968ioepNavin-58" edge="1">
+                    <mxGeometry x="-1" relative="1" as="geometry">
+                        <mxPoint x="250" y="135" as="targetPoint"/>
+                        <Array as="points"/>
+                        <mxPoint x="350" y="102" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-58" value="List all payments" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="150" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-59" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3x8CAyZt968ioepNavin-58" target="WV4lEcAO4vz2BIIuecdh-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="213.28999999999996" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="350" y="220"/>
+                            <mxPoint x="350" y="220"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-61" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WV4lEcAO4vz2BIIuecdh-5" target="3x8CAyZt968ioepNavin-66" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="309.66" y="320" as="targetPoint"/>
+                        <mxPoint x="310" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-63" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="WV4lEcAO4vz2BIIuecdh-5" target="3x8CAyZt968ioepNavin-68" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="439" y="320" as="targetPoint"/>
+                        <mxPoint x="439" y="250" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-66" value="Generate payments summary" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="320" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-67" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3x8CAyZt968ioepNavin-66" target="3x8CAyZt968ioepNavin-84" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-68" value="Filter payments" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="320" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-69" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=0.458;entryY=0.028;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="3x8CAyZt968ioepNavin-68" target="3x8CAyZt968ioepNavin-86" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="490" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-84" value="Create detailed payments&lt;div&gt;&amp;nbsp;summary&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="290" y="408" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-86" value="show only the&amp;nbsp;&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;payments&lt;/span&gt;&amp;nbsp;matching the criteria" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="408" width="130" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-87" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="3x8CAyZt968ioepNavin-88" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="380" y="525" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="490" y="458"/>
+                            <mxPoint x="490" y="525"/>
+                        </Array>
+                        <mxPoint x="505" y="458" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-88" value="" style="rhombus;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="510" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="3x8CAyZt968ioepNavin-89" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;labelBackgroundColor=none;fontColor=default;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="3x8CAyZt968ioepNavin-88" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="350" y="640" as="targetPoint"/>
+                        <mxPoint x="350" y="840" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="login" style="shape=mxgraph.uml25.behaviorAction;html=1;rounded=1;absoluteArcSize=1;arcSize=10;align=left;spacingLeft=5;whiteSpace=wrap;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="50" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="WV4lEcAO4vz2BIIuecdh-5" value="" style="rhombus;labelBackgroundColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="220" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="WV4lEcAO4vz2BIIuecdh-18" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;labelBackgroundColor=none;fontColor=default;" parent="1" source="3x8CAyZt968ioepNavin-84" target="3x8CAyZt968ioepNavin-88" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="444.65999999999997" y="780" as="targetPoint"/>
+                        <mxPoint x="445" y="740" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="5" value="" style="ellipse;html=1;shape=endState;fillColor=strokeColor;" parent="1" vertex="1">
+                    <mxGeometry x="335" y="560" width="30" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
