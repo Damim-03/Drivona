@@ -6,38 +6,42 @@
   <title>من نحن</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" href="../aboutUS/aboutus.css">
+  <link rel="stylesheet" type="text/css" href="./css/pages/index.css">
 </head>
 <body>
   <nav>
     <div class="logo">
       <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="الشعار" />
-      <h1>تأجير السيارات</h1>
+      <h1>بيع السيارات</h1>
     </div>
     <ul>
-      <li><a href="#">الرئيسية</a></li>
-      <li><a href="#">تفاصيل السيارة</a></li>
-      <li><a href="#">اتصل بنا</a></li>
+      <li><a href="./main/login.html">تسجيل الدخول</a></li>
+      <li><a href="./main/home.html">الرئيسية</a></li>
+      <li><a href="./main/contact.html">اتصل بنا</a></li>
+      <li><a href="#">من نحن</a></li>
     </ul>
   </nav>
 
   <div class="toggle-mode">
-    <button onclick="document.body.classList.toggle('dark-mode')">تبديل الوضع الليلي</button>
+    <button id="darkModeToggle" >
+      <i class="fas fa-moon"></i>
+      <span>الوضع الليلي</span>
+    </button>
   </div>
 
   <div class="container">
     <h1>من نحن</h1>
     <p class="about-text">
-      نحن شركة متخصصة في تأجير السيارات نسعى لتوفير تجربة سلسة وموثوقة لعملائنا. هدفنا هو تقديم سيارات حديثة، آمنة، وبأسعار تنافسية تناسب جميع الاحتياجات.
+      نحن وكاله متخصصة في بيع السيارات نسعى لتوفير تجربة سلسة وموثوقة لعملائنا. هدفنا هو تقديم سيارات حديثة، آمنة، وبأسعار تنافسية تناسب جميع الاحتياجات.
     </p>
 
     <div class="about-section">
-      <img src="https://cdn.pixabay.com/photo/2015/01/08/18/26/startup-593341_960_720.jpg" alt="فريق العمل" />
+      <img src="https://i.postimg.cc/9M7yHVm8/work-team.jpg" alt="فريق العمل" />
       <div>
         <h2>رؤيتنا</h2>
-        <p>أن نكون الخيار الأول في تأجير السيارات من خلال الابتكار والراحة والثقة.</p>
+        <p>أن نكون الخيار الأول في بيع السيارات من خلال الابتكار والراحة والثقة.</p>
         <h2>رسالتنا</h2>
-        <p>توفير خدمة تأجير سهلة، آمنة، وميسّرة تناسب جميع فئات العملاء.</p>
+        <p>توفير خدمة بيع سهلة، آمنة، وميسّرة تناسب جميع فئات العملاء.</p>
       </div>
     </div>
 
@@ -66,7 +70,8 @@
     <p><i class="fas fa-phone"></i> 055-123-4567</p>
     <p><i class="fas fa-envelope"></i> info@autorent.com</p>
     <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
-    <p style="margin-top: 20px;">&copy; 2025 تأجير السيارات - جميع الحقوق محفوظة</p>
+    <p style="margin-top: 20px;">&copy; 2025 بيع السيارات - جميع الحقوق محفوظة</p>
   </footer>
+  <script src="./js/utils/darkMode.js"></script>
 </body>
 </html>
