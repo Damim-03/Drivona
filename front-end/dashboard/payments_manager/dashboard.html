@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>بوابة الدفع</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet"  href="../../css/dashboard/payments_manager/dashboard.css"/>
+  <link rel="stylesheet" href="../../css/component/toast.css"/>
+</head>
+<body>
+
+  <div class="sidebar">
+    <div>
+      <h2><i class="fas fa-credit-card"></i> بوابة الدفع</h2>
+      <ul>
+        <li class="active"><a href="#"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li><a href="./payments.html"><i class="fas fa-credit-card"></i> المدفوعات</a></li>
+      </ul>
+    </div>
+    <button class="logout" id="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button>
+  </div>
+
+  <div class="main">
+    <div class="dashboard-header">بوابة الدفع</div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>إجمالي المدفوعات</h3>
+        <div class="value" id="total-revenues"></div>
+      </div>
+      <div class="card">
+        <h3>عمليات الدفع المسبقه</h3>
+        <div class="value" id="down-payments"></div>
+      </div>
+      <div class="card">
+        <h3>عمليات الدفع التكميلية</h3>
+        <div class="value" id="full-payments"></div>
+      </div>
+    </div>
+    <h3>عمليات الدفع الأخيره</h3>
+    <br>
+    <table class="payment-table">
+      <thead>
+        <tr>
+          <th>المعرف</th>
+          <th>العميل</th>
+          <th>المبلغ</th>
+          <th>نوع الدفعه</th>
+          <th>التاريخ</th>
+        </tr>
+      </thead>
+      <tbody id="payments-table">
+      </tbody>
+    </table>
+  </div>
+  <script type="module" src="../../js/utils/config.js"></script>
+  <script type="module" src="../../js/auth/authorized.js"></script>
+  <script type="module" src="../../js/auth/isPayment.js"></script>
+  <script type="module" src="../../js/auth/logout.js"></script>
+  <script type="module" src="../../js/utils/showToast.js"></script>
+  <script type="module" src="../../js/dashboard/reports/paymentHighlights.js"></script>
+  <script type="module" src="../../js/dashboard/reports/lastPaymets.js"></script>
+</body>
+</html>

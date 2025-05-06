@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,17 +7,23 @@
   <title>الصفحة الرئيسية</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/pages/home.css">
+  <link rel="stylesheet" type="text/css" href="../css/main/home.css">
 </head>
 <body>
 
   <nav>
     <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="الشعار" />
+      <img src="https://i.postimg.cc/wBK5RsXH/light-logo-removebg-preview.png" alt="الشعار" id="logo-img" />
       <h1>بيع السيارات</h1>
     </div>
-    <ul>
-      <li><a href="./login.html">تسجيل الدخول</a></li>
+  
+    <!-- Burger Icon -->
+    <button class="burger" id="burgerToggle" aria-label="فتح القائمة">
+      <i class="fas fa-bars"></i>
+    </button>
+  
+    <!-- Links -->
+    <ul class="nav-links" id="nav-links">
       <li><a href="#">الرئيسية</a></li>
       <li><a href="./contact.html">اتصل بنا</a></li>
       <li><a href="../index.html">من نحن</a></li>
@@ -46,16 +53,18 @@
       <label>نوع الوقود</label>
       <select id="fuel">
         <option value="">الكل</option>
-        <option value="بنزين">بنزين</option>
-        <option value="ديزل">ديزل</option>
-        <option value="كهرباء">كهرباء</option>
+        <option value="PETROL">بنزين</option>
+        <option value="DIESEL">ديزل</option>
+        <option value="ELECTRIC">كهرباء</option>
+        <option value="GAS">غاز</option>
+        <option value="HYBRID">هايبرد</option>
       </select>
 
       <label>ناقل الحركة</label>
       <select id="transmission">
         <option value="">الكل</option>
-        <option value="أوتوماتيك">أوتوماتيك</option>
-        <option value="عادي">عادي</option>
+        <option value="AUTO">أوتوماتيك</option>
+        <option value="MANUAL">عادي</option>
       </select>
 
       <label>عدد المقاعد</label>
@@ -72,165 +81,6 @@
 
     <div class="car-listings" id="car-list">
       <!-- سيارات -->
-      <!-- انسخ الكتلة التالية وعدّل البيانات حسب الحاجة -->
-      <!-- سيارة 1 -->
-      <div class="car-card" data-price="low" data-fuel="بنزين" data-transmission="عادي" data-seats="4">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 1" />
-        <div class="info">
-          <h4>تويوتا كورولا</h4>
-          <p>140 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-
-      <!-- سيارة 2 -->
-      <div class="car-card" data-price="medium" data-fuel="ديزل" data-transmission="أوتوماتيك" data-seats="5">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 2" />
-        <div class="info">
-          <h4>هيونداي النترا</h4>
-          <p>160 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-
-      <!-- سيارة 3 -->
-      <div class="car-card" data-price="high" data-fuel="كهرباء" data-transmission="أوتوماتيك" data-seats="7">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 3" />
-        <div class="info">
-          <h4>تسلا موديل 3</h4>
-          <p>250 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div><!-- سيارة 4 -->
-      <div class="car-card" data-price="medium" data-fuel="بنزين" data-transmission="أوتوماتيك" data-seats="5">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 4" />
-        <div class="info">
-          <h4>كيا سيراتو</h4>
-          <p>180 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star-half-alt" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      <!-- سيارة 5 -->
-      <div class="car-card" data-price="low" data-fuel="ديزل" data-transmission="عادي" data-seats="4">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 5" />
-        <div class="info">
-          <h4>ميتسوبيشي لانسر</h4>
-          <p>130 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star-half-alt" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      <!-- سيارة 6 -->
-      <div class="car-card" data-price="high" data-fuel="كهرباء" data-transmission="أوتوماتيك" data-seats="2">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 6" />
-        <div class="info">
-          <h4>سمارت فور تو</h4>
-          <p>220 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      <!-- سيارة 7 -->
-      <div class="car-card" data-price="medium" data-fuel="بنزين" data-transmission="عادي" data-seats="5">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 7" />
-        <div class="info">
-          <h4>فورد فوكس</h4>
-          <p>170 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      <!-- سيارة 8 -->
-      <div class="car-card" data-price="low" data-fuel="بنزين" data-transmission="عادي" data-seats="4">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg" alt="سيارة 8" />
-        <div class="info">
-          <h4>فيات 500</h4>
-          <p>120 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      <!-- سيارة 9 -->
-      <div class="car-card" data-price="high" data-fuel="ديزل" data-transmission="أوتوماتيك" data-seats="7">
-        <img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_960_720.jpg"alt="سيارة 9" />
-        <div class="info">
-          <h4>نيسان باترول</h4>
-          <p>280 ريال / اليوم</p>
-          <div class="rating">
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star" style="color: gold;"></i>
-            <i class="fas fa-star-half-alt" style="color: gold;"></i>
-            <i class="far fa-star" style="color: gold;"></i>
-          </div>
-          <a href="./pdp.html?id=123" class="details-btn">عرض التفاصيل</a>
-        </div>
-      </div>
-      
-      
-      
-      
-
-      <!-- سيارة 4 إلى 9 -->
-      <!-- أضف أي عدد تريده بنفس النمط -->
-
     </div>
   </div>
 
@@ -245,7 +95,12 @@
     </div>
   </footer>
   <!-- Dark Mode Script -->
+  <script type="module" src="../js/utils/config.js"></script>
+  <script type="module" src="../js/auth/auhenticated.js"></script>
+  <script type="module" src="../js/auth/checkIfUserAuthenticatedForMain.js"></script>
+  <script type="module" src="../js//browseCars/listCars.js"></script>
   <script src="../js/utils/darkMode.js"></script>
+  <script src="../js/utils/dropDown.js"></script>
   <script src="../js/utils/filter.js"></script>
 </body>
 </html>
