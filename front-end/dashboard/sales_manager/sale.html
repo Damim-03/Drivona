@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>تفاصيل المبيعات</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/dashboard/sales_manager/sale_details.css" />
+    <link rel="stylesheet" href="../../css/component/toast.css" />
+    <link rel="stylesheet" href="../../css/component/spinner.css" />
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <div>
+            <h2><i class="fas fa-car"></i>بوابة المبيعات</h2>
+            <ul>
+                <li><a href="./dashboard.html"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a></li>
+                <li class="active"><a href="./sales.html"><i class="fas fa-list"></i> قائمة المبيعات</a></li>
+                <li><a href="./inquiries.html"><i class="fa-solid fa-message"></i> الاستفسارات</a></li>
+            </ul>
+        </div>
+        <button class="logout" id="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button>
+    </div>
+
+    <div class="main">
+        <div class="dashboard-header">تفاصيل عملية البيع</div>
+        <div class="actions-container">
+            <a href="./sales.html" class="back-btn"><i class="fas fa-arrow-right"></i> العودة إلى قائمة المبيعات</a>
+        </div>
+
+        <div class="sale-details-container">
+            <div class="sale-header">
+                <div class="sale-id">
+                    <span class="label">معرف عملية البيع:</span>
+                    <span id="sale-id" class="value"></span>
+                </div>
+                <div class="sale-date">
+                    <span class="label">تاريخ الطلب:</span>
+                    <span id="sale-date" class="value"></span>
+                </div>
+            </div>
+
+            <div class="sale-details-grid">
+                <div class="car-details">
+                    <h3>معلومات السيارة</h3>
+                    <div class="car-image">
+                        <img id="car-image"
+                            src=""
+                            alt="صورة السيارة">
+                    </div>
+                    <div class="car-info">
+                        <div class="info-item">
+                            <span class="label">الموديل:</span>
+                            <span id="car-model" class="value"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">اللون:</span>
+                            <span id="car-color" class="value"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="customer-details">
+                    <h3>معلومات العميل</h3>
+                    <div class="info-item">
+                        <span class="label">الاسم الأول :</span>
+                        <span id="customer-first-name" class="value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">اللقب : </span>
+                        <span id="customer-last-name" class="value"></span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label"> البريد الإلكتروني : </span>
+                        <span id="customer-email" class="value"></span>
+                    </div>
+                </div>
+
+                <div class="payment-details">
+                    <h3>معلومات الدفع</h3>
+                    <div class="info-item">
+                        <span class="label">سعر البيع:</span>
+                        <span id="sale-price" class="value"></span>
+                    </div>
+                    <div class="info-item" id="payment-status">
+                        <span class="label"></span>
+                        <span class="value status-pending"></span>
+                    </div>
+                </div>
+
+                <div class="delivery-details">
+                    <h3>معلومات التسليم</h3>
+                    <div class="info-item" id="pickup-status">
+                        <span class="label"></span>
+                        <span class="value status-pending"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-section">
+                <!--  <button id="update-payment-btn" class="action-btn payment-btn">
+                    <i class="fas fa-money-bill"></i> تحديث حالة الدفع
+                </button>-->
+                <button id="update-pickup-btn" class="action-btn pickup-btn">
+                    <i class="fas fa-truck"></i> تحديث حالة الاستلام
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="update-role-dialog" class="dialog-overlay">
+        <div class="dialog-content">
+            <h3>تعديل دور المستخدم</h3>
+            <form id="update-pickup-form">
+                <div class="form-group">
+                    <label for="pickup-status-form">تحديث حالة الاستلام :</label>
+                    <select id="pickup-status-form" name="pickup-status" class="form-control">
+                        <option value="PENDING">قيد الانتظار</option>
+                        <option value="READY">جاهز للاستلام</option>
+                        <option value="PICKED_UP">تم الإستلام</option>
+                    </select>
+                </div>
+                <div class="dialog-buttons">
+                    <button type="button" id="cancel-update" class="btn btn-secondary">إلغاء</button>
+                    <button type="button" id="confirm-update" class="btn btn-primary">تأكيد</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="../../js/utils/config.js"></script>
+    <script type="module" src="../../js/auth/authorized.js"></script>
+    <script type="module" src="../../js/auth/isSale.js"></script>
+    <script type="module" src="../../js/auth/logout.js"></script>
+    <script type="module" src="../../js/utils/showToast.js"></script>
+    <script type="module" src="../../js/dashboard/manageSales/saleDetails.js"></script>
+    <script type="module" src="../../js/dashboard/manageSales/updatePickUpStatus.js"></script>
+</body>
+
+</html>

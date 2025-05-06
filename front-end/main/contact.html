@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>اتصل بنا</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link rel="stylesheet" type="text/css" href="../css/pages/concat.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" type="text/css" href="../css/main/concat.css">
+  <link rel="stylesheet" type="text/css" href="../css/component/toast.css">
 </head>
+
 <body>
   <nav>
     <div class="logo">
-      <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="الشعار" />
-      <span>بيع السيارات</span>
+      <img src="https://i.postimg.cc/wBK5RsXH/light-logo-removebg-preview.png" alt="الشعار" id="logo-img"/>
+      <h1>بيع السيارات</h1>
     </div>
-    <ul>
-      <li><a href="./login.html">تسجيل الدخول</a></li>
+
+    <!-- Burger Icon -->
+    <button class="burger" id="burgerToggle" aria-label="فتح القائمة">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Links -->
+    <ul class="nav-links" id="nav-links">
       <li><a href="./home.html">الرئيسية</a></li>
       <li><a href="#">اتصل بنا</a></li>
       <li><a href="../index.html">من نحن</a></li>
+    </ul>
   </nav>
 
   <div class="toggle-mode">
-    <button id="darkModeToggle" >
+    <button id="darkModeToggle">
       <i class="fas fa-moon"></i>
       <span>الوضع الليلي</span>
     </button>
@@ -31,16 +41,16 @@
   <div class="container">
     <h1>اتصل بنا</h1>
     <p class="contact-description">
-      يسعدنا تواصلك معنا! سواء كان لديك استفسار، اقتراح، أو ترغب في معرفة المزيد عن خدماتنا، لا تتردد في إرسال رسالة أو الاتصال بنا مباشرة.
+      يسعدنا تواصلك معنا! سواء كان لديك استفسار، اقتراح، أو ترغب في معرفة المزيد عن خدماتنا، لا تتردد في إرسال رسالة أو
+      الاتصال بنا مباشرة.
     </p>
 
     <div class="contact-layout">
       <form class="contact-form">
-        <input type="text" placeholder="الاسم الكامل" required />
-        <input type="email" placeholder="البريد الإلكتروني" required />
-        <input type="tel" placeholder="رقم الهاتف (اختياري)" />
-        <textarea rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
-        <button type="submit">إرسال الرسالة</button>
+        <input type="text" id="full-name" placeholder="الاسم الكامل" required />
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required />
+        <textarea rows="5" id="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        <button type="button" id="submit">إرسال الرسالة</button>
       </form>
 
       <div class="contact-details">
@@ -63,6 +73,12 @@
       <div class="copy">&copy; 2025 بيع السيارات - جميع الحقوق محفوظة</div>
     </div>
   </footer>
+  <script type="module" src="../js/utils/config.js"></script>
+  <script type="module" src="../js/sendInquiry.js"></script>
+  <script type="module" src="../js/auth/auhenticated.js"></script>
+  <script type="module" src="../js/auth/checkIfUserAuthenticatedForMain.js"></script>
   <script src="../js/utils/darkMode.js"></script>
+  <script src="../js/utils/dropDown.js"></script>
+  <script type="module" src="../js/utils/showToast.js"></script>
 </body>
 </html>

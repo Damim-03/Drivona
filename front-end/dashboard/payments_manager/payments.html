@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>الدفعات المقدمة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/dashboard/payments_manager/payments.css" />
+  <link rel="stylesheet" href="../../css/component/toast.css" />
+  <link rel="stylesheet" href="../../css/component/spinner.css" />
+</head>
+
+<body>
+  <div class="sidebar">
+    <div>
+      <h2><i class="fas fa-credit-card"></i> بوابة الدفع</h2>
+      <ul>
+        <li><a href="./dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+        <li class="active"><a href="#"><i class="fas fa-credit-card"></i> المدفوعات</a></li>
+      </ul>
+    </div>
+    <button class="logout" id="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل الخروج</button>
+  </div>
+
+  <div class="main">
+    <div class="dashboard-header">عمليات الدفع</div>
+    <div class="actions-container">
+      <div class="search-container">
+        <input type="text" id="email-search" placeholder="أدخل معرف عملية البيع" />
+        <button id="search-btn" class="btn-search"><i class="fas fa-search"></i></button>
+      </div>
+    </div>
+    <br/>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>الرقم</th>
+            <th>العميل</th>
+            <th>السيارة</th>
+            <th>المبلغ</th>
+            <th>التاريخ</th>
+            <th>الحالة</th>
+            <th>الإجراء</th>
+          </tr>
+        </thead>
+        <tbody id="sale-table-body">
+        </tbody>
+      </table>
+    </div>
+    <!--Update payment status diaglog-->
+    <div id="update-role-dialog" class="dialog-overlay">
+      <div class="dialog-content">
+        <h3 id="diaglog-action">تعديل دور المستخدم</h3>
+        <form id="update-role-form">
+          <div class="dialog-buttons">
+            <button type="button" id="cancel-update" class="btn btn-secondary">إلغاء</button>
+            <button type="button" id="confirm-update" class="btn btn-primary">تأكيد</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../../js/utils/config.js"></script>
+  <script type="module" src="../../js/auth/authorized.js"></script>
+  <script type="module" src="../../js/auth/isPayment.js"></script>
+  <script type="module" src="../../js/auth/logout.js"></script>
+  <script type="module" src="../../js/utils/showToast.js"></script>
+  <script type="module" src="../../js/dashboard/managePayments/listSales.js"></script>
+  <script type="module" src="../../js/dashboard/manageSales/filterSales.js"></script>
+  <script type="module" src="../../js/dashboard/managePayments/updatePaymentStatus.js"></script>
+</body>
+
+</html>
