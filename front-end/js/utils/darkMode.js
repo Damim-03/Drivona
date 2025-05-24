@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Change logo to dark mode version
       if (logoImg) {
-        logoImg.src = "https://i.postimg.cc/x1kDTBRh/dark-logo-removebg-preview.png";
+        logoImg.src = "https://i.postimg.cc/BQZ7T5fR/dark-logo-removebg-preview.png";
       }
     }
     
@@ -49,7 +49,15 @@ document.addEventListener('DOMContentLoaded', function() {
       
       // Change logo to light mode version
       if (logoImg) {
-        logoImg.src = "https://i.postimg.cc/wBK5RsXH/light-logo-removebg-preview.png";
+        logoImg.src = getLogoLink();
+      }
+    }
+    function getLogoLink(){
+      const currentUrl = window.location.href;
+      if(currentUrl.includes("login") || currentUrl.includes("signup")|| currentUrl.includes("faild_to_verify")|| currentUrl.includes("forgot_your_password")||currentUrl.includes("reset_your_password")){
+        return "https://i.postimg.cc/rFvWVcjg/light-logo-removebg-preview.png";
+      }else {
+        return "https://i.postimg.cc/BQZ7T5fR/dark-logo-removebg-preview.png";
       }
     }
   });

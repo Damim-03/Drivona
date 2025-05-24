@@ -1,7 +1,7 @@
 import { z } from "zod";
 export const initializeCarSchema = z.object({
     model: z.string().min(2),
-    year: z.number().min(2022),
+    year: z.number().min(2000),
     type: z.enum(["SEDAN", "HATCHBACK", "SUV", "TRUCK", "VAN", "COUPE", "CONVERTIBLE", "WAGON", "SPORTS", "HYBRID"]),
     transmission: z.enum(["MANUAL", "AUTO"]),
     driveType: z.enum(["FRONT_WHEEL", "REAR_WHEEL", "ALL_WHEEL"]),
@@ -37,4 +37,20 @@ export const updateEngineSchema = z.object({
     type: z.enum(["PETROL", "GAS", "DIESEL", "ELECTRIC", "HYBRID"]).optional(),
     capacity: z.number().positive().optional(),
     horsepower: z.number().positive().optional(),
+});
+export const updateCarMainSchema = z.object({
+    model: z.string().min(2).optional(),
+    year: z.number().min(2022).optional(),
+    type: z.enum(["SEDAN", "HATCHBACK", "SUV", "TRUCK", "VAN", "COUPE", "CONVERTIBLE", "WAGON", "SPORTS", "HYBRID"]).optional(),
+    transmission: z.enum(["MANUAL", "AUTO"]).optional(),
+    driveType: z.enum(["FRONT_WHEEL", "REAR_WHEEL", "ALL_WHEEL"]).optional(),
+    price: z.number().positive().optional(),
+    discount: z.number().optional().default(0).optional(),
+});
+export const updateCarFeaturesSchema = z.object({
+    maxSpeed: z.number().positive().optional(),
+    seats: z.number().positive().min(2).optional(),
+    doors: z.number().positive().min(2).optional(),
+    colors: z.array(z.string()).min(1).optional(),
+    features: z.array(z.string()).min(1).optional(),
 });
